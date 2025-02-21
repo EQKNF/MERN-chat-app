@@ -18,5 +18,7 @@ export const useAuthStore = create((set) => ({
             set({ authUser: null, isCheckingAuth: false });
             console.log("Error in checkAuth", error);
         }
-    }})
+    },
+    signup: async (formData) => {},
+})  
 ); 

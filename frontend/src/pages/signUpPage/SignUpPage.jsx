@@ -2,6 +2,7 @@ import React from 'react';
 import { MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SignUpForm from './SignUpForm';
+import AuthImagePattern from '../../components/AuthImagePattern';
 
 const SignUpPage = () => {
   return (
@@ -28,6 +29,10 @@ const SignUpPage = () => {
           </div>
         </div>
       </div>
+      {/* Right side */}
+      <AuthImagePattern title=" Join our community" subtitle="Connect with firends, share moments, and stay in touch with your loved ones."/>
+
+
     </div>
   );
 };

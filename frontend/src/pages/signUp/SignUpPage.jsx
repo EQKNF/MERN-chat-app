@@ -1,7 +1,7 @@
 import React from 'react';
 import { MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import SignUpForm from './SignUpForm';
+import SignUpForm from './SignUpForm'; 
 import AuthImagePattern from '../../components/AuthImagePattern';
 
 const SignUpPage = () => {

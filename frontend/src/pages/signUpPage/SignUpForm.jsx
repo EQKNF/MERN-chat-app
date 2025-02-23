@@ -2,24 +2,48 @@ import React, { useState } from 'react';
 import { Mail, Lock, User, Loader2 } from 'lucide-react';
 import InputField from './InputField';
 import { useAuthStore } from '../../store/useAuthStore';
+import toast from 'react-hot-toast';
 
 
-const AuthForm = () => {
+const SignUpForm = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [formData, setFormData] = useState({ fullname: '', email: '', password: '' });
+  const [formData, setFormData] = useState({
+      fullname: "",
+      email: "",
+      password: "",
+    });
   const { signup, isSigningUp } = useAuthStore();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const validateForm = () => {
+    if (!formData.fullname.trim()) {
+      return toast.error('Full name is required.');
+    }
+    if (!formData.email.trim()) {
+      return toast.error('Email is required.');
+    }
+    if(!/\S+@\S+\.\S+/.test(formData.email)){
+      return toast.error('Email is invalid.');
+    }
+    if (!formData.password.trim()) {
+      return toast.error('Password is required.');
+    }
+    if(formData.password.length < 6){
+      return toast.error('Password must be at least 6 characters.');
+     
+    }
+
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.fullname || !formData.email || !formData.password) {
-      alert('Please fill out all fields.');
-      return;
-    }
-    signup(formData);
+
+    const success = validateForm();
+    if(success===true) signup(formData);
   };
 
   return (
@@ -41,4 +65,4 @@ const AuthForm = () => {
   );
 };
 
-export default AuthForm;
+export default SignUpForm;

@@ -48,7 +48,7 @@ const SignUpForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <InputField label="Full Name" type="text" placeholder="Full Name" icon={User} value={formData.fullname} name="fullname" onChange={handleChange} />
+      <InputField label="Full Name" type="text" placeholder="Full Name" icon={User} value={formData.fullName} name="fullName" onChange={handleChange} />
       <InputField label="Email" type="email" placeholder="Email" icon={Mail} value={formData.email} name="email" onChange={handleChange} />
       <InputField label="Password" type={showPassword ? 'text' : 'password'} placeholder="Password" icon={Lock} value={formData.password} name="password" onChange={handleChange} showPasswordToggle onToggle={() => setShowPassword(!showPassword)} />
       

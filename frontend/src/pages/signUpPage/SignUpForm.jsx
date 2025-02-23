@@ -8,7 +8,7 @@ import toast from 'react-hot-toast';
 const SignUpForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({
-      fullname: "",
+      fullName: "",
       email: "",
       password: "",
     });
@@ -19,7 +19,7 @@ const SignUpForm = () => {
   };
 
   const validateForm = () => {
-    if (!formData.fullname.trim()) {
+    if (!formData.fullName.trim()) {
       return toast.error('Full name is required.');
     }
     if (!formData.email.trim()) {

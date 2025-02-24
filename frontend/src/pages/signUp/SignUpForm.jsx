@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Lock, User, Loader2 } from 'lucide-react';
-import InputField from './InputField';
+import InputField from '../../components/InputField';
 import { useAuthStore } from '../../store/useAuthStore';
 import toast from 'react-hot-toast';
 

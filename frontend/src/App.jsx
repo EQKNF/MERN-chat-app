@@ -9,6 +9,7 @@ import ProfilePage from './pages/ProfilePage'
 import { useAuthStore } from './store/useAuthStore'
 import { useEffect } from 'react'
 import { Toaster } from 'react-hot-toast'
+import { useThemeStore } from './store/useThemeStore'
 
 
 const App = () => {
@@ -19,8 +20,10 @@ const App = () => {
 
   console.log({authUser})
 
+  const {theme} = useThemeStore()
+
   return (
-    <div>
+    <div data-theme={theme}>
       <Navbar />
       <Routes>
         <Route path="/" element={authUser ? <HomePage /> : <Navigate to="/login" />} />

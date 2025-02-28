@@ -36,6 +36,6 @@ export const useChatStore = create((set) => ({
 
     //todo: optimise
 
-    setSelectedUsers: (selectedUser) => set({selectedUser}),
+    setSelectedUser: (selectedUser) => set({selectedUser}),
 
 }))

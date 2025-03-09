@@ -1,0 +1,21 @@
+{
+  "name": "mern-chat-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build":"",
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EQKNF/MERN-chat-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EQKNF/MERN-chat-app/issues"
+  },
+  "homepage": "https://github.com/EQKNF/MERN-chat-app#readme",
+  "description": ""
+}

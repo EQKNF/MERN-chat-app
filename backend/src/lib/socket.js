@@ -3,6 +3,8 @@ import http from 'http';
 import express from 'express';
 
 const app = express();
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ limit: '10mb', extended: true }));
 const server = http.createServer(app);
 
 const io = new Server(server, {
